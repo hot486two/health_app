@@ -1,0 +1,393 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_sleep"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme.FragmentContainer"
+    tools:context=".MainActivity$TimelineFragment" >
+
+    <!-- Contents container -->
+    <LinearLayout
+        android:id="@+id/layout_status2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- Realtime calorie, walks -->
+        <LinearLayout
+            android:id="@+id/layout_status_hori2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <!-- Calorie -->
+            <LinearLayout
+                android:id="@+id/layout_sleep"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/text_title_sleep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="@string/title_sleep"
+                    android:textColor="#bbbbbb"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/sleep_start"
+                        android:layout_width="63dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/sleep_start"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="15dp"
+                        />
+                    <ImageButton
+                        android:id="@+id/sleep_finish"
+                        android:layout_width="63dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/sleep_end"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Walks -->
+            <LinearLayout
+                android:id="@+id/time_sleep"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                >
+                <TextView
+                    android:id="@+id/text_time_sleep"
+                    android:text="@string/title_time_sleep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:textColor="#bbbbbb"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/text_content_time_sleep"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:padding="5dip"
+                    android:textColor="#777777"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Seperator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dip"
+            android:background="@color/grayd"
+            />
+
+
+        <!-- stastics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/text_title_statistics2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:textColor="#777777"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="@string/title_statistics"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#999999"
+                android:stretchColumns="*">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#ff8bc8cc"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="DATE"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#ff8bc8cc"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep4"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep5"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep6"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep7"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_sleep8"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_sleep_time8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="SLEEP TIME"
+                        />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- Seperator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/grayd"
+            />
+
+
+        <!-- Content List
+        <ListView
+            android:id="@+id/list_timeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/AppTheme.List" />
+         -->
+    </LinearLayout>
+
+
+</FrameLayout>

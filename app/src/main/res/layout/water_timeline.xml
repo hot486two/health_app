@@ -1,0 +1,387 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_timeline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme.FragmentContainer"
+    tools:context=".MainActivity$TimelineFragment" >
+
+    <!-- Contents container -->
+    <LinearLayout
+        android:id="@+id/layout_status3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- Realtime calorie, walks -->
+        <LinearLayout
+            android:id="@+id/layout_status_hori3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <!-- Calorie -->
+            <LinearLayout
+                android:id="@+id/layout_water"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/text_title_water"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="@string/title_water"
+                    android:textColor="#bbbbbb"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    />
+                <ImageButton
+                    android:src="@drawable/water"
+                    android:id="@+id/text_content_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:padding="5dip"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   Touch to reduce count !"
+                    android:layout_margin="5dp"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+
+
+            <!-- Walks -->
+            <LinearLayout
+                android:id="@+id/layout_cups_water"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                >
+                <TextView
+                    android:id="@+id/text_title_cup_water"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="@string/title_cup_water"
+                    android:textColor="#bbbbbb"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/text_content_cup_water"
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:padding="5dip"
+                    android:textColor="#777777"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Seperator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dip"
+            android:background="@color/grayd"
+            />
+
+
+        <!-- stastics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/text_title_statistics2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:textColor="#777777"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="@string/title_statistics"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#999999"
+                android:stretchColumns="*">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#ff8bc8cc"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="DATE"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#ff8bc8cc"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water4"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water5"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water6"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water7"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_water8"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="DATE"
+                        />
+                    <TextView
+                        android:id="@+id/date_water_time8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:hint="CUPS of WATER"
+                        />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- Seperator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/grayd"
+            />
+
+
+        <!-- Content List
+        <ListView
+            android:id="@+id/list_timeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/AppTheme.List" />
+         -->
+    </LinearLayout>
+
+</FrameLayout>
